@@ -20,15 +20,17 @@ void PrintList(struct LLnode* head){
 		printf("\n");
 }
 void PrintListReverse(struct LLnode* head){
-	if (!head)
-//		printf("\n");
+	if (!head){
 		return;
+	}
+	
 	PrintListReverse(head->next);
-		printf("%d--->", head->data);
+	printf("%d--->", head->data);
 }
 void InsertNode(struct LLnode** head, int data, int position){
 	printf("Inserting node at %d position and value %d\n", position, data);
-	struct LLnode* newNode, *current;
+	struct LLnode* newNode, *current; //,*prev;
+	int k=1;
 	current=*head;
 	if ((*head==NULL) &&(position==1)){
 		newNode= getNode(data);
@@ -38,6 +40,17 @@ void InsertNode(struct LLnode** head, int data, int position){
 		newNode= getNode(data);
 		newNode->next=current;
 		*head=newNode;
+	}
+	else{
+		//prev=current;
+		while((k<position-1) && (current->next!=NULL)){
+			k++;
+			//prev=current;
+			current=current->next;
+			}
+		newNode= getNode(data);
+		newNode->next=current->next;
+		current->next=newNode;
 	}
 }
 int main(){
@@ -49,6 +62,12 @@ int main(){
 	PrintList(head);
 	PrintListReverse(head);
 	InsertNode(&head, 10, 1);
+	PrintList(head);
+	PrintListReverse(head);
+	InsertNode(&head, 15, 2);
+	PrintList(head);
+	PrintListReverse(head);
+	InsertNode(&head, 100, 5);
 	PrintList(head);
 	PrintListReverse(head);
 	return 0;

@@ -1,4 +1,3 @@
-
 dataStructures/.codelite/ctags
 dataStructures/.codelite/ctags
 *.tags
@@ -14,3 +13,6 @@ dataStructures/Makefile
 dataStructures/tags
 Makefile
 tags
+*.project
+dataStructures/.codelite/
+dataStructures/LinkedList/LinkedList.project
