@@ -1,0 +1,16 @@
+
+dataStructures/.codelite/ctags
+dataStructures/.codelite/ctags
+*.tags
+*.session
+dataStructures/LinkedList/compile_flags.txt
+dataStructures/LinkedList/Debug/.d
+*.exe
+*.o
+*.d
+*.mk
+dataStructures/LinkedList/LinkedList.txt
+dataStructures/Makefile
+dataStructures/tags
+Makefile
+tags
