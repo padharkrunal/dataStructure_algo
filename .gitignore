@@ -16,3 +16,6 @@ tags
 *.project
 dataStructures/.codelite/
 dataStructures/LinkedList/LinkedList.project
+*.out
+
+
