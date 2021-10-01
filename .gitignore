@@ -17,5 +17,5 @@ tags
 dataStructures/.codelite/
 dataStructures/LinkedList/LinkedList.project
 *.out
-
+*.vscode
 
